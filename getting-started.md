@@ -7,16 +7,19 @@ Let's go through this to set up your repo:
 - [ ] you can navigate the links between your notes by `cmd+click` (or `ctrl+click` on Windows) on a wikilink. Here, go to your [[inbox]]
 
 - [ ] to see how your notes are connected, execute the `Foam: Show Graph` command
+
   - **tip** - `cmd+click` on a node to navigate to it
   - **tip** - keep the graph open. As you navigate your files, it will focus on the active note, so you can at a glance see how it's connected in your knowledge base
 
 - [ ] #tags can be used to further organize your content. Look at the `Tag Explorer` view on the left panel to find and navigate the tags in your knowledge base
 
 - [ ] You can use Foam for your daily notes, or journaling. Execute now the `Foam: Open Daily Note` command to create a new file in your `journal` folder.
+
   - **tip** - you can customize location, filename and note title for you daily notes in the settings
 
 - [ ] The section at the end of this file contains [wikilink definitions](https://foambubble.github.io/foam/features/link-reference-definitions), which enable navigation of your notes from GitHub's web UI, and in general to make `[[wikilinks]]` understood by any markdown parser.
-  - **tip** - Foam will sync links and definitions  whenever you save the file
+
+  - **tip** - Foam will sync links and definitions whenever you save the file
   - **tip** - If you are just using foam in VsCode you can turn off wikilink definitions in your VsCode settings
 
 - [ ] Want to see how to manage your tasks? Go to the [[todo]] note
