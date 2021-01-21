@@ -2,9 +2,8 @@
 
 Welcome to your new foam workspace, let's get you started.
 
-This is a working link at [Data Structures Introduction](data-structures-introduction)
-[[data-structures-introduction]]
-Let's go through this to set up your repo:
+Manual Organization Of Link : [Data Structures Introduction](data-structures-introduction)
+Foam Generated Link:[[data-structures-introduction]]
 
 - [ ] you can navigate the links between your notes by `cmd+click` (or `ctrl+click` on Windows) on a wikilink. Here, go to your [[inbox]]
 
