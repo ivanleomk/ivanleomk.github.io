@@ -1,0 +1,115 @@
+I"¶<h1 id="linear-functions">Linear Functions</h1>
+
+<h1 id="what-is-a-linear-function">What is a Linear Function</h1>
+
+<p>A Linear function is one which <strong>applies a scalar multiple to each individual variable within the function</strong> and **passes through the origin at $x=0$ **.</p>
+
+\[f(x_1,x_2,\dots,x_n) = \alpha_1 x_1 + \alpha_2 x_2 + \dots + \alpha_n x_n\]
+
+<p>As a result, the following are not linear functions</p>
+
+<ol>
+  <li>$f(x,y) = xy$</li>
+  <li>$f(x,y) =sin(x)$</li>
+  <li>$f(x) = x^n$</li>
+  <li>$f(x) = 2x+3$</li>
+</ol>
+
+<p>We observe that</p>
+
+<p>(1) is not a linear function because individual variables are multiplied against one another rather than using a scalar multiple (e. 2,3,4)</p>
+
+<p>(2) is not a linear function because a non-linear function is applied against a variable</p>
+
+<p>(3) is not a linear function because a variable is raised to a power $n$ which is not equal to $1$</p>
+
+<p>(4) is not a linear function because it does not pass through the origin at $x=0$. It is instead a [[affine function]]</p>
+
+<h1 id="solving-linear-programming-question">Solving Linear Programming Question</h1>
+
+<p>Step 1 : Decide on the decision variables</p>
+
+<p>Step 2 : Identify the constraints</p>
+
+<p>Step 3 : Find the feasible area</p>
+
+<h2 id="determinine-the-feasible-area---maximisation">Determinine the Feasible Area - Maximisation</h2>
+
+<p>I have 200 hectares of Land, $10,000 of upfront investment and 1200 labour man-hours. I incur the following profit and costs when I plant the two respective crops - Wheat and barley</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Crop Name</th>
+      <th>Cost/Hec</th>
+      <th>Profit/Hec</th>
+      <th>Labor/Hec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wheat</td>
+      <td>$100</td>
+      <td>$50</td>
+      <td>$10</td>
+    </tr>
+    <tr>
+      <td>Barley</td>
+      <td>$200</td>
+      <td>$120</td>
+      <td>$30</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Question : How should I optimize this?</p>
+
+<p><strong>Step 1</strong> : Decide on our decision variables</p>
+
+<p>We know that we need to vary the amount of hectares of barley and wheat that we plant in terms of hectares. Let us term this $B$ and $W$.</p>
+
+<p><strong>Step 2</strong> : Decide on our constraints</p>
+
+<p>We have the following constraints</p>
+
+<ol>
+  <li>
+    <p>We must plant positive amounts of barley and wheat. This can be expressed as $B\geq 0$ and $W \geq 0$.</p>
+  </li>
+  <li>
+    <p>We must also ensure that the total cost incurred for our barley and wheat planting exercise is within our original budget of $10,000$. We also know that the cost per hectare to plant barley and wheat is $100$ and $200$ respectively. We can therefore express this as</p>
+  </li>
+  <li>
+    <p>We must also ensure that the total amount of man-hours we spend to plant all our crops is going to be within the 1200 labor man-hours we have. This means that we have</p>
+  </li>
+  <li>
+    <p>We must ensure that the total amount of barley and wheat we plant does not exceed $200$ hectares. This can be expressed as $B+W\leq200$.</p>
+  </li>
+</ol>
+
+<p><strong>Step 3</strong> : Find our feasible Region</p>
+
+<ol>
+  <li>We first begin by defining our decision region. We can do so by applying the following constraints to an infinite plane.</li>
+</ol>
+
+<p>This gives us a feasible region as seen below.</p>
+
+<p><img src="/assets/images/FeasibleArea.png" alt="" /></p>
+
+<ol>
+  <li>We then begin by applying our second constraint, that is that the total amount of barley and wheat does not exceed 200 hectares and that the amount of man hours we spend to plant our crops is within the 1200 labor man hours. These correspond to</li>
+</ol>
+
+<p>We then apply our new constraints and arrive at a new feasible radius of</p>
+
+<ol>
+  <li>We can conclude that the best amount of barley and wheat to plant should therefore be the at the intersection seen below since we plant the most barley and wheat at that point.</li>
+</ol>
+
+<p><img src="/assets/images/NewFeasible.png" alt="" /></p>
+
+<h1 id="convex-areas">Convex Areas</h1>
+
+<p>A convex area is defined as a part of a plane such that any two of its points are entirely contained within that part of the plane. Any connecting part of the boundary of the convex area is called a convex curve.</p>
+:ET

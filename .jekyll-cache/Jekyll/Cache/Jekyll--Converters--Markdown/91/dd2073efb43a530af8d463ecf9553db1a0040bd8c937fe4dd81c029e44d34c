@@ -1,0 +1,55 @@
+I"i	<h1 id="introduction-to-linear-algebra">Introduction To Linear Algebra</h1>
+
+<h1 id="big-picture">Big Picture</h1>
+
+<p>In Linear Algebra, we have two broad kinds of problems</p>
+
+<ol>
+  <li>$Ax = y$ where $A$ represents some form of matrix</li>
+  <li>$Ax = \lambda y$ where $A$ represents some form of matrix and $\lambda$ some constant</li>
+</ol>
+
+<p>We will be required to implement some basic functions in R for this course and are not allowed to use the in-built operators for vector addition, dot product and others.</p>
+
+<h1 id="general-paradigms">General Paradigms</h1>
+
+<h2 id="row-picture">Row Picture</h2>
+
+<p>When looking at the row picture, we are sketch out all combinations of our variables which will give us a desired result.</p>
+
+<h1 id="big-picture-1">Big Picture</h1>
+
+<p>In Linear Algebra, we have two broad kinds of problems</p>
+
+<ol>
+  <li>$Ax = y$ where $A$ represents some form of matrix</li>
+  <li>$Ax = \lambda y$ where $A$ represents some form of matrix and $\lambda$ some constant</li>
+</ol>
+
+<p>We will be required to implement some basic functions in R for this course and are not allowed to use the in-built operators for vector addition, dot product and others.</p>
+
+<h1 id="general-paradigms-1">General Paradigms</h1>
+
+<h2 id="row-picture-1">Row Picture</h2>
+
+<p>The row picture is most naturally seen when we are young when we are given a system of equations such as</p>
+
+\[x + 2y + 3z\\
+2x + 3y + z\\\]
+
+<p>We observe here that we require three equations for our three unknowns. This is because each equation represents a plane in $R^{3}$ and we need three planes in order to find a point of intersection between each plane.</p>
+
+<p>When looking at the row picture, we are sketch out all combinations of our variables which will give us a desired result.</p>
+
+<p><img src="/assets/images/row-pictures.png" alt="" /></p>
+
+<p>As seen above, we either have a unique solution (Where $4x+y=9$ and $2x-y=3$ intersect) or we have no solutions ( if we had $4x+y=9$ and perhaps $8x+2y=18$).</p>
+
+<h2 id="column-picture">Column Picture</h2>
+
+<p>The column picture asks us to determine if we can find a vector for which we can obtain a desired vector.</p>
+
+<p><img src="/assets/images/column-picture.png" alt="" /></p>
+
+<p>As seen above, we either have a unique solution (Where $4x+y=9$ and $2x-y=3$ intersect) or we have no solutions ( if we had $4x+y=9$ and perhaps $8x+2y=18$).</p>
+:ET
