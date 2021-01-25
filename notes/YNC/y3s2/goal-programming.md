@@ -28,6 +28,12 @@ The Simplex Algorithm relies on 4 Assumptions
 3. All constraints can be written in terms of inequality
 4. All inequalities have the same sign
 
+Some useful tricks are that we can
+
+1. Convert a minimization objective function to a maximisation one by simply inverting the signs
+2. Add in non-negativity constraints by breaking down our decision variables
+3. Flip the sign of the inequality by multiplying both sides by -1.
+
 Let us see an example.
 
 $$
