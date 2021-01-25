@@ -1,0 +1,66 @@
+I"F	<h1 id="vector-spaces">Vector Spaces</h1>
+
+<p>There are two important operations within a vector space which contains a set $V$ and a field $\mathbb{F}$ which itself</p>
+
+<ol>
+  <li>Addition : Where we take as input <strong>two elements of a set V</strong> and return a single elemnt of a set V</li>
+  <li>Scalar Multiplication : Where we take as input <strong>one scalar and one element of a set V</strong> and return a single element of a set V.</li>
+</ol>
+
+<p>We want our operations to be closed under addition and scalar multiplication. This means that a sum of two elements in a set must belong to the original set. The same should also hold for a scalar multiple of an eleemtn of the set. When this holds, we say that $V$ is closed under addition and closed under scalar multiplication.</p>
+
+<h2 id="vector-field-properties">Vector Field Properties</h2>
+
+<ol>
+  <li>
+    <p>Addition is commutative</p>
+
+\[\forall u,v \in V , u + v = v + u\]
+  </li>
+  <li>
+    <p>Addition is associative</p>
+  </li>
+</ol>
+
+\[\forall u,v,w \in V, u + (v+w) = (u+v)+ w\]
+
+<ol>
+  <li>The set V contains an additive identity</li>
+</ol>
+
+\[\exists \epsilon \in \mathbb{V} \text{ such that } \forall v \in V , v + \epsilon = v\]
+
+<ol>
+  <li>The set V contains an additive inverse</li>
+</ol>
+
+\[\forall v \in V , \exists u \in V \text{ such that } u + v = \epsilon\]
+
+<ol>
+  <li>Scalar multiplcation is associative</li>
+</ol>
+
+\[\forall \alpha,\beta \in \mathbb{F}, v \in V, \alpha\cdot(\beta v) = \alpha \cdot \beta (v)\]
+
+<ol>
+  <li>
+    <p>The field $\mathbb{R}$ contains a multiplicative identity such that $\forall v \in V, v \cdot 1 = v$</p>
+  </li>
+  <li>
+    <p>Operations interact via distributive property.</p>
+  </li>
+</ol>
+
+\[\forall u,v \in V \&amp; \alpha \in \mathbb{F}, \alpha ( u + v) = \alpha \cdot u + \alpha \cdot v\]
+
+\[\forall \alpha, \beta \in \mathbb{F} \&amp; v \in V, \alpha\cdot v + \beta \cdot v = (\alpha + \beta) \cdot v\]
+
+<p>Note</p>
+
+<ol>
+  <li>Any field $\mathbb{F}$ is a vector space over itself. We can also define a set of vectors using the existing field by creating a set of tuples of length $n$ containing elements from $\mathbb{F}$. <strong>All that matters is that the field operation axioms are satisfied</strong>.</li>
+</ol>
+
+<p>Here are some [<a href="vector-spaces-proofs" title="Vector Spaces Proofs">vector-spaces-proofs</a>] to consider.</p>
+
+:ET

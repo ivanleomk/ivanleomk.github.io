@@ -1,0 +1,20 @@
+I"1<h1 id="goal-programming">Goal Programming</h1>
+
+<h1 id="standard-form">Standard Form</h1>
+
+<p>Once we have formulated our equations into [<a href="linear-functions" title="Linear Functions">linear-functions</a>], we can then proceed to rework our inequalities into equations in order to solve them using a [<a href="systems-of-linear-equations" title="Systems Of Linear Equations">systems-of-linear-equations</a>]. This requires us to rework our equations into what is known as standard form.</p>
+
+<p>Standard Form has two main requirements</p>
+
+<ol>
+  <li>All variables are non-negative</li>
+  <li>All constraints are equations</li>
+</ol>
+
+<p>A general trick is to define either a surplus or an excess depending on the nature of the problem to do so. Once we have done so, we then arrive at a [<a href="systems-of-linear-equations" title="Systems Of Linear Equations">systems-of-linear-equations</a>] which has $n$ unknown variables and $m$ equations.</p>
+
+<p>This is expected since we will have multiple basic feasible solutions and therefore not one unique solution. What we therefore need to do instead is to set $n-m$ variables as non-basic. This means that we essentially set their value to be 0. We then choose $n$ variables to be basic and solve for them to obtain a solution for $Ax=b$.</p>
+
+<p>TODO : ADD EXAMPLE</p>
+
+:ET

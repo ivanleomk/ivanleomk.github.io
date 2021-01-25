@@ -1,0 +1,12 @@
+I"D<h1 id="revision-of-probability">Revision Of Probability</h1>
+
+<p>Transformation of variable for uni and bivariate distributions</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Jacobian Transformation</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Using PDF/CDF directly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Calculating Expectation</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Distributions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />PDFs of individual distributions</li>
+</ul>
+:ET

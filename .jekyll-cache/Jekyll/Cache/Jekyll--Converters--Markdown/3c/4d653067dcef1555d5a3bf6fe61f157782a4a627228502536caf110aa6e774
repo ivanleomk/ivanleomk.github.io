@@ -1,0 +1,66 @@
+I"�<h1 id="optimization-problems">Optimization Problems</h1>
+
+<h1 id="optimization-problems-1">Optimization Problems</h1>
+
+<p>We can define an optimization problem in terms of three requirements</p>
+
+<h2 id="objective-function">Objective Function</h2>
+
+<p>This is a function we wish to maximize of minimize. We call it the objective function because it provides an objective way to compare different possible choices within the feasible region ( if any ) .</p>
+
+<h2 id="decision-variables">Decision Variables</h2>
+
+<p>These represent the variables whose values are under our control that influence the performance of the system.</p>
+
+<h2 id="constraints">Constraints</h2>
+
+<p>Constraints are the restrictions we place on the values of our decision variables.</p>
+
+<p>These three prerequisites must be defined in order to have an optimization problem on hand. Our goal is then to first apply our constraints on our decision variables to obtain a feasible region. This represents the specification of the decision variables which satisfy all of the model’s constraints.</p>
+
+<p>We then use our objective function to compare different choices within this feasible region that optimizes the objective function. Optimization can come in many forms (Eg. Maximization, Minimization )</p>
+
+<h1 id="types-of-optimization-problem">Types Of Optimization Problem</h1>
+
+<p>When considering what type of optimization problem we are looking at, we can consider three main categories</p>
+
+<ol>
+  <li>Discrete vs Continous : Decision variables are either discrete or continous, leading to us having a corresponding discrete or continous optimization problem</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sample Discrete Problem: We can buy eggs and brownies. Eggs cost $1 and give us 100 calories while brownies cost $1.50 and give us 200 calories. How many of each should we buy to maximise the number of calories we obtain. (The number of brownies/eggs takes on a discrete integer value. We cannot have for instance 3.14 eggs, we can only have 3 in this case.)
+
+Sample continous problem : We have 20 metres of fence. We want to maximise the area that we fence off and we want to use a rectangular shape. How can we optimize the area we fence off? (Length is a continous variable and can take on any real value)
+</code></pre></div></div>
+
+<ol>
+  <li>Deterministic vs Stochastic : Sometimes, we are unsure about the value of our decision variables and are only aware of the range that we expect to get them in.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sample Stochastic problem : We expect to sell 8-12 donuts a day. Each donut costs us $1 and we sell them for $1.10 each. How many donuts should we purchase each day to maximise our profit
+
+Sample Deterministic problem: We can buy eggs and brownies. Eggs cost $1 and give us 100 calories while brownies cost $1.50 and give us 200 calories. How many of each should we buy to maximise the number of calories we obtain
+</code></pre></div></div>
+
+<ol>
+  <li>Prescriptive, Optimization and Descriptive :</li>
+</ol>
+
+<ul>
+  <li>Prescriptive models aim to prescribe behaviours for an organization to meet its goals.</li>
+  <li>Optimization models seek to find values of the decision variables that optimize an objective function among the set of all values for the decision variables that satisfy the given constraints</li>
+  <li>Descriptive models aim to describe the behaviour of a outcome as a function of various factors.</li>
+</ul>
+
+<ol>
+  <li>Static and Dynamic Models:</li>
+</ol>
+
+<ul>
+  <li>Static Models : Decision variables do not involves sequences of decisions over multiple periods</li>
+  <li>Dynamic models : Decision variables do involve sequences of decisions over multiple periods</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In a static model we solve a “one-shot” problem whose solutions prescribe optimal values of decision variables at all points in time. A dynamic model on the other hand involves decisions made over multiple periods (eg. over the next four quarters) with unique optimal values of decision variables at each point.
+</code></pre></div></div>
+:ET

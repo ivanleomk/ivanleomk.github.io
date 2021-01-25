@@ -2,7 +2,7 @@
   "api_url": "https://api.github.com",
   "archived": null,
   "baseurl": "/pages/user/repo",
-  "build_revision": "77b7259a4cd2ceee00d1dda934809eb379516274",
+  "build_revision": "fe6776a7d597f6d0845712cf2c5cac99db179de2",
   "clone_url": "https://github.com/user/repo.git",
   "contributors": false,
   "disabled": null,
@@ -25,7 +25,7 @@
     "created_at": "2008-06-25 06:56:09 UTC",
     "description": null,
     "email": null,
-    "followers": 44,
+    "followers": 45,
     "following": 6,
     "has_organization_projects": null,
     "has_repository_projects": null,
@@ -1056,4 +1056,4 @@
   },
   "wiki_url": null,
   "zip_url": "https://github.com/user/repo/zipball/gh-pages"
-}, "description"=>#<Jekyll::GitHubMetadata::Value:0x00007f874aa65e18 @key="description", @value=nil, @rendered=nil>}:ET
+}, "description"=>#<Jekyll::GitHubMetadata::Value:0x00007fb9d7174ab0 @key="description", @value=nil, @rendered=nil>}:ET

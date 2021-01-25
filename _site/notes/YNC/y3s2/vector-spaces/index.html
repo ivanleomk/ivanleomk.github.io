@@ -17,7 +17,7 @@
 {"url":"/notes/YNC/y3s2/vector-spaces/","headline":"Vector Spaces","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=77b7259a4cd2ceee00d1dda934809eb379516274">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fe6776a7d597f6d0845712cf2c5cac99db179de2">
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
@@ -27,7 +27,7 @@
 
        <h1 id="vector-spaces">Vector Spaces</h1>
 
-<p>There are two important operations within a vector space.</p>
+<p>There are two important operations within a vector space which contains a set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span> and a field <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">F</mi></mrow><annotation encoding="application/x-tex">\mathbb{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">F</span></span></span></span></span> which itself</p>
 
 <ol>
   <li>Addition : Where we take as input <strong>two elements of a set V</strong> and return a single elemnt of a set V</li>
@@ -39,9 +39,57 @@
 <h2 id="vector-field-properties">Vector Field Properties</h2>
 
 <ol>
-  <li>Addition is commutative
-2.</li>
+  <li>
+    <p>Addition is commutative</p>
+
+\[\forall u,v \in V , u + v = v + u\]
+  </li>
+  <li>
+    <p>Addition is associative</p>
+  </li>
 </ol>
+
+\[\forall u,v,w \in V, u + (v+w) = (u+v)+ w\]
+
+<ol>
+  <li>The set V contains an additive identity</li>
+</ol>
+
+\[\exists \epsilon \in \mathbb{V} \text{ such that } \forall v \in V , v + \epsilon = v\]
+
+<ol>
+  <li>The set V contains an additive inverse</li>
+</ol>
+
+\[\forall v \in V , \exists u \in V \text{ such that } u + v = \epsilon\]
+
+<ol>
+  <li>Scalar multiplcation is associative</li>
+</ol>
+
+\[\forall \alpha,\beta \in \mathbb{F}, v \in V, \alpha\cdot(\beta v) = \alpha \cdot \beta (v)\]
+
+<ol>
+  <li>
+    <p>The field <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">R</span></span></span></span></span> contains a multiplicative identity such that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∀</mi><mi>v</mi><mo>∈</mo><mi>V</mi><mo separator="true">,</mo><mi>v</mi><mo>⋅</mo><mn>1</mn><mo>=</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">\forall v \in V, v \cdot 1 = v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord">∀</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span></p>
+  </li>
+  <li>
+    <p>Operations interact via distributive property.</p>
+  </li>
+</ol>
+
+\[\forall u,v \in V \&amp; \alpha \in \mathbb{F}, \alpha ( u + v) = \alpha \cdot u + \alpha \cdot v\]
+
+\[\forall \alpha, \beta \in \mathbb{F} \&amp; v \in V, \alpha\cdot v + \beta \cdot v = (\alpha + \beta) \cdot v\]
+
+<p>Note</p>
+
+<ol>
+  <li>Any field <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">F</mi></mrow><annotation encoding="application/x-tex">\mathbb{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">F</span></span></span></span></span> is a vector space over itself. We can also define a set of vectors using the existing field by creating a set of tuples of length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> containing elements from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">F</mi></mrow><annotation encoding="application/x-tex">\mathbb{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">F</span></span></span></span></span>. <strong>All that matters is that the field operation axioms are satisfied</strong>.</li>
+</ol>
+
+<p>Here are some [<a href="vector-spaces-proofs" title="Vector Spaces Proofs">vector-spaces-proofs</a>] to consider.</p>
+
  
 
 <script type="text/javascript">
