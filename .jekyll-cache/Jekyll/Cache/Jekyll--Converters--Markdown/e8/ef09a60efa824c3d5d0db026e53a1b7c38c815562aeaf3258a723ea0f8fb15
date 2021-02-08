@@ -1,0 +1,65 @@
+I"'
+<h1 id="probability-distributions">Probability Distributions</h1>
+
+<h1 id="discrete-distributions">Discrete Distributions</h1>
+
+<h2 id="bernoulli-trial">Bernoulli Trial</h2>
+
+<p>There are only two possible outcomes - success and failure.</p>
+
+\[P(X) = (1-\theta) \text{  if x = 0 else }\theta\]
+
+<h2 id="binomial-distribution">Binomial Distribution</h2>
+
+<p>When we have $n$ Bernoulli trials, we end up with a binomial distribution. Our random variable $X$ here represents the number of successes in these $n$ Bernoulli trials.</p>
+
+<p>We therefore have a pdf defined as</p>
+
+\[P(x=r) = {n \choose r} \theta^r (1-\theta)^{n-r}\]
+
+<p>where $r$ represents the number of successes.</p>
+
+<p>As $n$ tends to infinity, we find that our binomial distribution in turn tends to a normal distribution.</p>
+
+<h2 id="negative-binomial">Negative Binomial</h2>
+
+<p>$X$ here represents the number of bernoulli trials to be observed till a fixed number of successes is observed. $\theta$ here represents the probability of success. This gives us the pdf of</p>
+
+\[P(X=r) = {r-1 \choose k-1} \theta^k(1-\theta)^{r-k}\]
+
+<p>The intuition here is that the final trial alwaus involves the $k-th$ success. Therefore we permute the initial $r-1$ trials which involves $k-1$ successes.</p>
+
+<p>The sum of independent negative binomials having the same value of $\theta$ is also interestingly negative binomial.</p>
+
+<p>The expectaiton of this distribution is $\frac{k}{\theta}$ and the variance is $\frac{k(1-\theta)}{\theta^2}$</p>
+
+<h2 id="geometric">Geometric</h2>
+
+<p>The geometric distribution is concerned with the number of trials till the first success. We therefore have a pdf of</p>
+
+\[P(x=k) = (1-\theta)^{k-1}\theta\]
+
+<p>The expectation of this distribution is $\frac{1}{\theta}$ and its variance is $\frac{1-\theta}{\theta^2}$</p>
+
+<h2 id="poisson">Poisson</h2>
+
+<p>The poisson distribution measures the number of events observed in a fixed time period given a rate of occurence.</p>
+
+<p>We have a probability density function of</p>
+
+\[P(x=r) = \frac{\theta^re^{-\theta}}{r!}\]
+
+<p>Interestingly, the mean and the variance of the poisson is its rate paramter. In this case, that is $\theta$</p>
+
+<h2 id="hypergeometric">Hypergeometric</h2>
+
+<p>The hypergeometric distribution shows the probability of obtaining $r$ succeses in a population of size $N$ when drawing a sample of size $n$. In this population, we have $R$ successes and $N-R$ failures.</p>
+
+<p>We can calculate the probability of obtaining $r$ successes by taking</p>
+
+\[p(x=r) = \frac{
+{R \choose r} {N-R \choose n-r}
+}{
+    {N \choose n}
+}\]
+:ET

@@ -1,0 +1,14 @@
+I"<h1 id="probability-distributions">Probability Distributions</h1>
+
+<h1 id="discrete-distributions">Discrete Distributions</h1>
+
+<h2 id="bernoulli-trial">Bernoulli Trial</h2>
+
+<p>There are only two possible outcomes - success and failure.</p>
+
+\[P(X) = (1-\theta) if x = 0 else \theta\]
+
+<h2 id="binomial-distribution">Binomial Distribution</h2>
+
+<p>When we have $n$ Bernoulli trials, we end up with a binomial distribution. Our random variable $X$ here represents the number of successes in these $n$ Bernoulli trials.</p>
+:ET
