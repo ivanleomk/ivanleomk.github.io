@@ -37,7 +37,7 @@ If they were, they honestly wouldn't need a chatbot or your help in the first pl
 
 ### Pitfalls of Simple Generation
 
-The core issue is that LLMs tend to generate a narrow distribution of outputs, even with prompt variations. Ultimately they're trained on messy and often badly formatted data so they need to be able to map these large variations to their internal representations.
+My bro-science explanation for this is that LLMs tend to generate a certain distribution of outputs, even with prompt variations. Ultimately they're trained on messy and often badly formatted data so they need to be able to map these large variations to their internal representations.
 
 For instance, most of the time I mistype every single word in my prompts to language models when I chat with them - this is especially true as I've switched over to use transcription more often to save on typing. There's at least 5-10% of the time where I'll say a short phrase that's transcribed wrongly and the model still gets my underlying intent very very well.
 
@@ -58,9 +58,11 @@ But when it comes to more open ended domains like query generation, it's a lot m
 
 ### Varying Personas
 
-This isn't a very new idea and often times this is the easiest way to introduce variations initially. A lot of people tend to use personas as a way to guide the style and tone of the generated data. Take this [article](https://www.answer.ai/posts/2024-10-15-how-to-synthesize-data.html) by Nathan Cooper for instance where he used different personas as a way to augment a training dataset.
+This isn't a very new idea and often times this is the easiest way to introduce variations initially. A lot of people tend to use personas as a way to guide the style and tone of the generated data.
 
-He ended up using a second model to do a quick scoring of the generated code snippets. We can see this similar approach in Dria's codebase where they try to generate diverse personas with the following prompt.
+Take this [article](https://www.answer.ai/posts/2024-10-15-how-to-synthesize-data.html) by Nathan Cooper for instance where he used different personas as a way to augment a training dataset. What was interesting wasn't the personas here but the use of a second model to grade the generated outputs.
+
+Here's an excerpt of an equivalent prompt with Dria:
 
 > Your task is to generate a creative and coherent backstory based on the provided persona traits and simulation description.
 >
@@ -124,10 +126,12 @@ One area however that I'm a bit skeptical of for synthetic data is low-resource 
 
 This human-generated content, though smaller in volume, often provides more value than a larger synthetic dataset that might miss these crucial elements. That's what Singapore did for singlish - which is a variation of english that's unique to Singapore which combines chinese grammatical structures with english along with slang from other languages like malay and tamil.
 
-There's a new 6 hour audio and text dataset avaliable if you're interested in this space.
+[There's a new 6 hour audio and text dataset avaliable if you're interested in this space.](https://huggingface.co/datasets/mesolitica/IMDA-STT)
 
 ## Conclusion
 
 Synthetic data isn't magic - it's a tool that requires careful thought and systematic validation. Success comes from building robust generation pipelines that incorporate business logic and real-world constraints, not just generating large volumes of data.
 
-The goal isn't to generate perfect data, but to create useful data that helps improve your systems in meaningful ways. Whether you're using frameworks like Drea or building your own pipeline, the key is to think carefully about how to introduce meaningful variation while maintaining quality and relevance to your use case.
+The goal isn't to generate perfect data, but to create useful data that helps improve your systems in meaningful ways. I personally like to think about it like a fuzzer of sorts.
+
+Whether you're using frameworks like Dria or building your own pipeline, the key is to think carefully about how to introduce meaningful variation while maintaining quality and relevance to your use case.
