@@ -13,6 +13,8 @@ Here are some articles I've written recently which might be of interest
 
 4. [How to use Braintrust for Evals](./blog/posts/braintrust-from-scratch.md) : A quick guide to setting up evaluation pipelines with Braintrust to test LLM performance, with examples using the GSM8k dataset.
 
+5. [Is RAG dead?](./blog/posts/what-is-rag.md) : RAG isn't dead, we're just getting started with it.
+
 ## Stay Updated
 
 I send out a monthly newsletter with interesting things I've read, things I've built, and things I've learned. Sometimes I send two.
