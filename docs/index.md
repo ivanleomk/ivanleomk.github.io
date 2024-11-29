@@ -17,8 +17,4 @@ Here are some articles I've written recently which might be of interest
 
 6. [Write Stupid Evals](./blog/posts/write-stupid-evals.md) : Keep it simple and worry about the rest later.
 
-## Stay Updated
-
-I send out a monthly newsletter with interesting things I've read, things I've built, and things I've learned. Sometimes I send two.
-
 <script async data-uid="b184c2f91e" src="https://ivan-leo.kit.com/b184c2f91e/index.js"></script>
