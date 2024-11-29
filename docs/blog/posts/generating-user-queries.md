@@ -1,10 +1,10 @@
 ---
-title: Simulate User Intent not Personas
+title: The 4 levels of Synthetic Data Generation
 date: 2024-11-29
-description: The easiest thing to do to improve your synthetic data
+description: The easiest thing you can do today to improve your synthetic data quality
 categories:
-  - Mac
-  - RWKV
+  - Synthetic Data
+  - Evals
 authors:
   - ivanleomk
 ---
