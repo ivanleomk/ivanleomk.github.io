@@ -13,9 +13,13 @@ authors:
 
 ## Introduction
 
-Over the past few weeks, I've generated millions of tokens of synthetic data. Through trial and error, I've discovered that the common advice about using personas and multi-hop queries, while helpful, misses a crucial point: understanding and simulating user intent is far more important than generating volume.
+I've generated millions of tokens worth of synthetic data over the last few weeks, and I've learned something surprising: everyone talks about using different personas or complex question structures when creating synthetic data, but they're missing what really matters.
 
-Let's explore this concept using [Peek](https://peek.money), an AI personal finance bot, as our case study. By examining how synthetic data generation evolves from basic documentation-based approaches to intent-driven synthesis, we'll see why focusing on user intent produces more valuable training data.
+The most important thing is actually understanding why users are asking their questions in the first place - their intent.
+
+Let's explore this concept using [Peek](https://peek.money), an AI personal finance bot, as our case study.
+
+By examining how synthetic data generation evolves from basic documentation-based approaches to intent-driven synthesis, we'll see why focusing on user intent produces more valuable training data.
 
 <!-- more -->
 
@@ -149,7 +153,9 @@ Using Peek's FAQ as input, this approach generates questions like:
 - "What measures does Peek take to ensure my financial data remains secure?"
 - "What happens if the company undergoes significant operational changes?"
 
-While these questions are technically valid, they're almost one-to-one mappings from the documentation. They don't reflect how users naturally interact with a financial application. If all we needed was to answer documentation-based questions, a simple search system using BM25 or embeddings would suffice.
+While these questions are technically valid, they're almost one-to-one mappings from the documentation. They don't reflect how users naturally interact with a financial application.
+
+If all we needed was to answer documentation-based questions, a simple search system using BM25 or embeddings would suffice.
 
 ### Level 2: Adding Personas and Context
 
@@ -187,13 +193,9 @@ These questions reflect specific user intents:
 - Understanding spending trends
 - Planning for major life changes
 
-To generate intent-based synthetic data, we need to:
+By thinking carefully about how users are going to interact with our product, we can randomly sample from these intents or even combine different intents together to generate more complex queries.
 
-1. Identify core user intents from documentation and existing usage
-2. Create specific scenarios that combine personas with intents
-3. Generate variations that test different aspects of your chatbot's capabilities
-
-Here's how we might structure an intent-based generation system:
+This allows us to stress test different aspects of our application's capabilities in a way that simple personas cannot.
 
 ```python
 intents = {
@@ -212,13 +214,13 @@ intents = {
 }
 ```
 
-The key is mapping these intents to your chatbot's actual capabilities. For example:
+The key is mapping these intents to the actual capabilities of an application like peek for instance
 
-- Transaction retrieval functions
-- Portfolio analysis tools
-- Financial planning calculators
+- Transaction Retrieval Functions
+- Portfolio Analysis Tools
+- Financial Planning calculators
 
-Using a framework like [`instructor`](http://python.useinstructor.com), we can convert these intents into Pydantic objects with executable methods, abstracting away the complexity of tool orchestration:
+While you can use any framework of your choice, using instructor we can convert these intents to Pydantic objects that have executable methods. This abstracts away the complexity of orchestrating different tools and separates the planning of the response from the execution.
 
 ```python
 class FinancialQuery(BaseModel):
@@ -226,11 +228,7 @@ class FinancialQuery(BaseModel):
     query: str
 
     def execute(self):
-        # Map intent to specific tool calls
-        if self.intent == "Feature Discovery":
             return self.fetch_feature_documentation()
-        elif self.intent == "Investment Analysis":
-            return self.analyze_portfolio()
 ```
 
 ### Level 4: Grounding in Real User Data
@@ -239,10 +237,10 @@ While understanding user intent helps generate better synthetic data, there's no
 
 This helps you identify new patterns in how users phrase questions, areas where your system struggles, and whether your synthetic data still reflects reality. By grounding your synthetic data in real usage patterns, you ensure your testing remains relevant to what users actually care about.
 
-The goal isn't to have perfect synthetic data, but rather to have synthetic data that helps you build and test the capabilities your users actually need.
+The goal isn't to have perfect synthetic data, but rather to have synthetic data that helps you build and test the capabilities your users actually need
 
 ## Conclusion
 
-While personas and query variations are useful tools, the key to generating valuable synthetic data lies in understanding user intent. By focusing on why users interact with your application and mapping those intents to specific capabilities, you can create synthetic data that truly helps improve your chatbot's performance.
+While personas and query variations are useful tools, the key to generating valuable synthetic data lies in understanding user intent. By focusing on why users interact with your application and mapping those intents to specific capabilities, you can create synthetic data that truly helps improve your application's performance.
 
-Remember: synthetic data is just a tool. The goal isn't to generate massive volumes of queries, but to create focused test cases that verify your chatbot can understand and respond to real user needs effectively.
+Remember: synthetic data is just a tool. The goal isn't to generate massive volumes of queries, but to create focused test cases that verify your application can understand and respond to real user needs effectively.
