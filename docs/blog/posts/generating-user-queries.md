@@ -1,5 +1,5 @@
 ---
-title: The 4 levels of Synthetic Data Generation
+title: Why User Intent matters the most for Synthetic Data
 date: 2024-11-29
 description: The easiest thing you can do today to improve your synthetic data quality
 categories:
