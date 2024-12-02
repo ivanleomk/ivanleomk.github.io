@@ -1,5 +1,5 @@
 site_name: Ivan's Blog
-site_url: https://www.ivanleo.com
+site_url: https://ivanleo.com
 theme:
   name: material
   features:
@@ -7,7 +7,6 @@ theme:
     - content.code.annotate
   custom_dir: docs/overrides
 plugins:
-  - social
   - search
   - blog:
       blog_toc: true
@@ -32,6 +31,10 @@ plugins:
             show_bases: true
 markdown_extensions:
   - admonition
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.arithmatex:

@@ -39,7 +39,11 @@ The main value add here seems to be that you can have a `.envrc` file in each pr
 1. You need to approve direnv to load the `.envrc` file in each directory every single time you open a new terminal session.
 2. You can't seem to selectively unset environment variables in the global `.zshrc` file that you set in the `.envrc` file in each directory and only have a subset of the vars
 
-Eg. if you had FOO_1, FOO_2, BAR_1 in your global `.zshrc` file, you can't seem to get just FOO_1 in your new subdirectory shell without manually unsetting the other two in the `.envrc` file.
+Eg. if you had FOO_1, FOO_2, BAR_1 in your global `.zshrc` file, you can't seem to get just FOO_1 in your new subdirectory shell without manually unsetting the other two in the `.envrc` file. I'd love to know if there's a better way to do this
+
+### Httpie
+
+I've started using httpie over curl because it's just so much nicer to use. You can download them from [here](https://httpie.io/download)
 
 ### Mkdocs Specific
 
@@ -54,6 +58,10 @@ I then configured some local paths
 ```bash
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
 ```
+
+!!! note
+
+    Make sure to add this to your specific shell in order for this to work
 
 And that was good enough for me to get my mkdocs builds running locally.
 
