@@ -1,6 +1,6 @@
 ---
 title: "Are your eval improvements just pure chance?"
-date: 2024-12-03
+date: 2024-12-04
 description: "Grokking simple statistical analysis for LLM evals"
 categories:
   - LLMs
@@ -13,13 +13,17 @@ authors:
 
 A step that's often missed when benchmarking retrieval methods is determining if any performance difference is due to random chance. Without this crucial step, you might invest in a new system upgrade that's outperformed your old one by pure chance.
 
-If you're comparing retrieval methods, you'll often want to know if the improvements you're seeing are due to random chance. In this article, we'll use a simple case study to demonstrate how to answer this question, introducing a new library called `indomee` (a playful nod to both "in-domain" evaluation and the beloved instant noodle brand in Southeast Asia) that makes this analysis significantly easier.
+If you're comparing retrieval methods, you'll often want to know if the improvements you're seeing are due to random chance.
+
+In this article, we'll use a simple case study to demonstrate how to answer this question, introducing a new library called `indomee` (a playful nod to both "in-domain" evaluation and the beloved instant noodle brand in Southeast Asia) that makes this analysis significantly easier.
 
 We'll do so in three steps:
 
 1. First we'll simulate some fake data using `numpy`
 2. Then we'll demonstrate how to do bootstrapping using nothing but `numpy` before visualising the results with `matplotlib`
 3. Finally we'll perform a paired t-test to determine if the differences are statistically significant
+
+<!-- more -->
 
 Let's start by installing the necessary libraries:
 
