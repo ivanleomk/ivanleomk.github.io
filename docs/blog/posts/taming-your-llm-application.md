@@ -295,11 +295,15 @@ Humans can then quickly verify these scores, dramatically speeding up the creati
 
 #### Style and Quality Assessment
 
-LLMs can also evaluate subjective aspects like writing style and response quality, though this comes with important caveats.
+Let me revise to keep the links while focusing on the key points:
 
-Models tend to cluster their ratings around 7-8 out of 10 (mimicking human rating patterns) and can be inconsistent in their evaluations. Rather than using LLM judges for absolute quality metrics, they work better as part of a human-in-the-loop process - catching obvious issues, suggesting improvements, and filtering content before human review.
+LLMs make great judges in two key ways.
 
-The goal isn't perfect automated evaluation, but rather making human reviewers more efficient by handling routine cases and highlighting where their attention is most needed.
+First, they're excellent at generating initial "weak" labels that humans can quickly verify - this is way faster (and significantly cheaper) than having humans label everything from scratch. For example, when building a reranker (as detailed in [this instructor.com guide](https://python.useinstructor.com/blog/2024/10/23/building-an-llm-based-reranker-for-your-rag-pipeline/#defining-the-reranking-models)), we can use LLMs to generate initial relevance scores that human annotators can rapidly validate.
+
+LLMs are also surprisingly good at judging subjective things like writing quality and conversational style, but you have to be smart about it. The key is making it an iterative process - start by having humans rate examples, use those to refine your prompts and evaluation criteria, then keep adjusting based on feedback. [Vespa's deep dive](https://blog.vespa.ai/improving-retrieval-with-llm-as-a-judge/) by Jo offers a great walkthrough of this iterative improvement process.
+
+The goal isn't perfect agreement out of the gate, but steady improvement through systematic refinement of how we ask LLMs to judge.
 
 ## Conclusion
 
