@@ -16,14 +16,15 @@ authors:
 
 When building LLM applications, teams often jump straight to complex evaluations - using tools like RAGAS or another LLM as a judge. While these sophisticated approaches have their place, I've found that starting with simple, measurable metrics leads to more reliable systems that improve steadily over time.
 
-## Four levels of LLM Applications
+## Five levels of LLM Applications
 
-I think there are four levels that teams should progress through as they build more reliable language model applications.
+I think there are five levels that teams seem to progress through as they build more reliable language model applications.
 
 1. Structured Outputs - Move from raw text to validated data structures
 2. Prioritizing Iteration - Using cheap metrics like recall/mrr to ensure you're nailing down the basics
 3. Fuzzing - Using synthetic data to systmetically test for edge cases
-4. LLM Judges - Using LLM as a judge to evaluate subjective aspects
+4. Segmentation - Understanding the weak points of your model
+5. LLM Judges - Using LLM as a judge to evaluate subjective aspects
 
 Let's explore each level in more detail and see how they fit into a progression. We'll use `instructor` in these examples since that's what I'm most familiar with, but the concepts can be applied to other tools as well.
 
@@ -280,6 +281,19 @@ But more importantly, with these specific queries, we can see that
 Ideally we'd want to blend this with real user queries to get a good mix of both over time. We can to be re-generating these queries over time to ensure that we're still perfoming well + our synthetic queries are representative of the queries that users actually ask.
 
 If users always ask stuff like "good food taiwan" but your synthetic queries are always long and overly complex like "I'm a solo traveller who likes to explore local food and culture in Taiwan, what are some great food places thT i can visit? I like ... " then you're not going to get a good sense of how well your system is doing.
+
+### Segmentation
+
+The next step once you've started testing your LLM system is to understand its weak points. Specifically, you want to know which portions of your application aren't performing well.
+
+This is where you need to do some segmentation and start breaking down your system into different components - This is an article on it's own but basically here's how to think about it
+
+1. Your application will be a combination of different components
+2. Each component will be able to do different things
+3. It's not going to score well on everything and so users will complain about it
+4. You need to weight the amount of effort required to improve each component + the amount of users that are actually affected by it
+
+If you find that there's a huge problem with how your language model is handling dates for instance but only 2% of users are complaining about it, then perhaps spend your time elsewhere if there are other problems at bay.
 
 ### Qualitative Evaluation
 
