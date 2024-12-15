@@ -1,24 +1,23 @@
 ---
-title: Converting Subjective Evals to Binary Metrics
+title: Simplify your LLM Evals
 date: 2024-12-15
-description: How to write simpler evaluations for subjective tasks
+description: A practical guide to writing binary evals for subjective tasks
 categories:
   - LLMs
 authors:
   - ivanleomk
 ---
 
-# Converting Subjective Evals to Binary Metrics
+# Simplify your LLM Evals
 
 Although many tasks require subjective evaluations, I've found that starting with simple binary metrics can get you surprisingly far. In this article, I'll share a recent case study of extracting questions from transcripts.
+We'll walk through a practical process for converting subjective evaluations to measurable metrics:
 
-We'll do so in 3 steps
+1. Using synthetic data for rapid iteration - instead of waiting minutes per test, we'll see how to iterate in seconds
+2. Converting subjective judgments to binary choices - transforming "is this a good question?" into "did we find the right transcript chunks?"
+3. Iteratively improving prompts with fast feedback - using clear metrics to systematically enhance performance
 
-1. First, we'll see how synthetic data can be a good starting point to iterate quickly
-2. Then we'll see an example of how to convert a subjective evaluation to a binary metric
-3. Lastly, we'll walk through how we used this approach to iteratively improve our prompts and evals
-
-By the end of this article, you'll have a good starting point for writing better evals for your next project.
+By the end of this article, you'll have concrete techniques for making subjective tasks measurable and iterating quickly on LLM applications.
 
 <!-- more -->
 
@@ -137,14 +136,8 @@ This transferred effectively to real-world data. When I finally tested the impro
 
 ## Conclusion
 
-Ideally, you should start with simple metrics that can be calculated quickly. While in this example we've seen that binary metrics are easy to calculate, their benefits extend far beyond just measurement efficiency.
+Before reaching for that LLM as a judge, it's often good to start with simpler metrics. They're easier to reason about, make it easy for members of your team to get involved and ultimately make a good starting point before you look at sophisticated equivalents.
 
-Firstly, they reduce the cognitive load making it easy for other members of the team to evaluate the results. They don't need to wrestle with complex scoring rubrics or subjective scales.
+Starting simple forces you to break down big problems into smaller pieces. While you might eventually want more detailed metrics, getting the basics right is a crucial first step.
 
-Secondly, they lower the barrier to team participation. With more nuanced evaluation systems, like 1-5 scales or detailed rubrics, you often need extensive domain knowledge and training to evaluate consistently.
-
-Lastly, they make it easy to get started. Often times when evaluations are more complex and subjective, it's hard to find common ground. Binary metrics on the other hand, make it easy to secure quick early wins and get started.
-
-Eventually you'd want to move to more complex metrics but starting with binary metrics is a good way to get started. Converting subjective evaluation into binary metrics isn't always obvious, but it's often more possible than it first appears. By combining synthetic data with simple, measurable objectives, you can create a development process that enables rapid iteration while maintaining clear quality standards.
-
-Remember: the goal isn't to eliminate subjective evaluation entirely, but to establish a solid foundation of measurable metrics first. This makes it much easier to systematically improve your system and know when you're making real progress.
+If you liked this article, consider subscribing to my newsletter for more articles like this.
