@@ -21,7 +21,7 @@ I kept things minimal for my general development environment, following most of 
 
 ```bash
 # Core development tools I use daily
-brew install git htop warp uv node bun
+brew install git htop warp uv node bun gh
 ```
 
 Why these specific choices? They form the backbone of my development workflow without adding unnecessary complexity.
