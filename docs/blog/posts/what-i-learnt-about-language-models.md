@@ -73,7 +73,7 @@ I really like the fact that syncing documentation from libraries is built in wit
 
 I use language models extensively for coding and writing. For instance, the following UI that I was prototyping was generated almost entirely by a language model using [V0](https://v0.dev).
 
-![](./images/cyoa.gif)
+![](https://r2-workers.ivanleomk9297.workers.dev/cyoa.gif)
 
 It's crazy because just 3 years ago, this would have cost a significant amount of money and time to build.
 
