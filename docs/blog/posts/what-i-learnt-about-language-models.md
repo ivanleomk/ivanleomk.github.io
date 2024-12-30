@@ -93,6 +93,8 @@ They have specific failure modes and blind spots that you can only learn to reco
 
     Don't jump straight to subjective metrics; begin with objective ones that are easy to measure and understand. When implementing RAG, prioritize the quality of retrieved content, ensure effective integration with your existing system, and systematically evaluate improvements over time.
 
+    I've written a [longer article](./taming-your-llm-application.md) which goes into more detail on how to approach building LLM applications.
+
 The next step of understanding comes from hands-on experience. You'll find that with the raw API, you'll have much more flexibility and control over what the models can do. This also means that there's a significantly larger surface area of things that might go wrong. I would recommend starting with things in the following order
 
 1. Working with the OpenAI API and getting used to Structured Outputs ( and when you shouldn't use them )
