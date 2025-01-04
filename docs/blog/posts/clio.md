@@ -11,6 +11,8 @@ authors:
 
 # Using Language Models to make sense of Chat Data without compromising user privacy
 
+> If you're interested in the code for this article, you can find it [here](https://github.com/ivanleomk/chatterbox) where I've implemented a simplified version of CLIO without the PII classifier and most of the original prompts ( to some degree ).
+
 Analysing chat data at scale is a challenging task for 3 main reasons
 
 1. **Privacy** - Users don't want their data to be shared with others and we need to respect that. This makes it challenging to do analysis on user data that's specific
