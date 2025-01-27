@@ -82,7 +82,11 @@ This in turn helped to develop more fine grained classifiers for their PII class
 
 ## Implementing CLIO
 
-Now that we understand on a high level how CLIO works, let's implement a simplified version of it in Python. We'll be using `gemini-1.5-flash` since it's cheaper to use and I have higher rate-limits on it.
+Now that we understand on a high level how CLIO works, let's implement a simplified version of it in Python. We'll be using `gemini-1.5-flash` since it's cheaper to use and I have higher rate-limits on it. I've put together a [Github Repository with the code here](https://github.com/ivanleomk/chatterbox) where you can find the code for this article.
+
+It also contains a FastHTML application that you can use to generate and visualise your own clusters.
+
+![](https://r2-workers.ivanleomk9297.workers.dev/clio.gif)
 
 We'll do so in 3 steps.
 
