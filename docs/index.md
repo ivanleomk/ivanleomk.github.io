@@ -1,6 +1,6 @@
 # Who am I
 
-Research Engineer at 567 Labs working on synthetic data generation and evaluations for Large Language Models. I maintain open source libraries like [Instructor](https://github.com/instructor-ai/instructor) and [indomee](https://github.com/ivanleomk/indomee).
+Research Engineer at 567 Labs working on synthetic data generation and evaluations for Large Language Models. I maintain open source libraries like [Instructor](https://github.com/instructor-ai/instructor), [indomee](https://github.com/ivanleomk/indomee) and [Kura](https://github.com/ivanleomk/kura).
 
 Follow my newsletter for the latest updates on blog articles, resources I liked the most and other random thoughts on taming your LLMs.
 
