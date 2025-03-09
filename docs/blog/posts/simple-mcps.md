@@ -75,8 +75,6 @@ These are challenges that will need to be overcome in order to scale out MCPs in
 
 The future we're working toward is one where AI services can dynamically create and compose tools based on usage patterns and needs. Current MCPs focus on single-model interactions with granular tools, but the real potential lies in building networks of specialized AI microservices that communicate through standardized interfaces.
 
-Consider how rapidly the ecosystem is already growing. Some hosted MCP providers are already handling up to 18,000 requests daily, showing clear product-market fit. New marketplaces for MCPs (like Cline's recent launch) are enabling developers to monetize these specialized services. This evolution parallels traditional microservices architecture, but with a crucial difference: the coordination happens through AI reasoning rather than hardcoded logic.
-
 These microservices will need to do a few different things
 
 1. **Tool Discovery**: Current MCP servers simply list all of the tools but I think it's a bit unfeasible to throw 100+ tools at a model and expect it to always call the right tool. What I think will probably happen is that models will start to specify semantic requests that they have (Eg. **Find me an outfit under $150 made of cotton** and the MCP server will dynamically fetch and provide tools on demand )
@@ -89,17 +87,11 @@ This ultimately will resemble more of a microservice architecture that we're fam
 
 ### Monetized Specialisation
 
-As MCPs mature, we'll likely see a marketplace economy emerge around specialized AI services. Similar to how app stores transformed mobile development, MCP marketplaces could enable developers to monetize capabilities through subscriptions or usage-based pricing. This specialization creates better economics for all: users get more capable systems, model providers focus on core reasoning, and specialists monetize their domain expertise in areas like financial analysis, medical knowledge, or creative tools.
+As MCPs mature, we'll likely see a marketplace economy emerge around specialized AI services. Similar to how app stores transformed mobile development, MCP marketplaces could enable developers to monetize capabilities through subscriptions or usage-based pricing. This isn't a hypothetical situation with some hosted MCP providers already handling up to 18,000 requests daily as of this post.
+
+This shows clear product-market fit with Cline recently launching its own MCP marketplace to allow developers to monetise specialised services in the form of MCP servers. This specialization creates better economics for all: users get more capable systems, model providers focus on core reasoning, and specialists monetize their domain expertise in areas like financial analysis, medical knowledge, or creative tools.
 
 The success of this ecosystem will depend on balancing openness with quality controls. As with all platform economies, network effects will be crucial—the most valuable MCP services will be those that integrate seamlessly with the widest range of other tools. The emerging landscape might resemble cloud infrastructure markets, where specialized providers offer components that developers can combine into comprehensive solutions for specific use cases.
-
-Here are two concise paragraphs exploring the economic aspects of MCPs, including the first-mover advantage for service providers:
-
-## The Economics of an MCP Ecosystem
-
-As MCPs mature, we'll likely see a marketplace economy emerge around specialized AI services. Similar to how app stores transformed mobile development, MCP marketplaces could enable developers to monetize capabilities through subscriptions or usage-based pricing. This specialization creates better economics for all: users get more capable systems, model providers focus on core reasoning, and specialists monetize their domain expertise in areas like financial analysis, medical knowledge, or creative tools.
-
-Service providers who embrace MCPs early will gain significant competitive advantages. E-commerce platforms, travel agencies, and financial institutions that offer standardized MCP endpoints will become the preferred partners for AI systems, driving higher engagement and capturing market share. Much like how businesses that adopted mobile-first approaches dominated the smartphone era, companies that provide AI-native interfaces through MCPs will set customer expectations and establish themselves as industry leaders. This first-mover advantage extends beyond just visibility—these early adopters will help shape the protocol standards themselves, potentially influencing how entire industries interact with AI systems for years to come.
 
 ## Conclusion
 
