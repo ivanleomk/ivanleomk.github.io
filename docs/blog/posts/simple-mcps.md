@@ -49,6 +49,12 @@ While this might seem similar to OpenAPI specifications, MCPs serve a fundamenta
 
 This is different from traditional REST APIs where each endpoint typically handles one discrete operation. For example, when a model needs to analyze calendar data and send meeting summaries via email, it can discover and compose these tools on the fly rather than requiring developers to implement these combinations upfront.
 
+We can see an example below where we have 2 MCP calls within the same chat completion.
+
+![](./images/mcp_correction.png)
+
+The model, when asked by the user what words are due for review discovers that there are no words due for review today. Because it has access to a MCP to query the database, it can modify it's arguments and look at a future date to determine if we have other words that might fit this requirement.
+
 Currently, users interact with MCPs through a MCP client. A majority of these clients only support tool calling as seen in [Anthropic's client list](https://modelcontextprotocol.io/clients) - which is why we've chosen to focus on it but the specification does lay the groundwork for more sophisticated forms of interactions.
 
 The simplicity of the tool calling protocol - just two endpoints - makes it easy to implement while still supporting complex tool compositions that would be cumbersome to represent in traditional API specifications.
@@ -57,15 +63,13 @@ The simplicity of the tool calling protocol - just two endpoints - makes it easy
 
 However, current MCP implementations often exist as proof-of-concept projects - local servers piping commands through standard input/output. While this works for enthusiastic developers experimenting with personal workflows, the path to production-ready systems reveals several crucial infrastructure gaps.
 
-1. **Authentication and Authorization**: Current implementations rely on simple API keys, but production systems need more sophisticated approaches. Consider the difference between "show me today's calendar events" (relatively low risk) versus "cancel my meeting with the CEO" (high risk). We need OAuth-style flows with granular permissions that can distinguish between read operations and potentially destructive actions which can be invoked across multiple services.
+1. **Authentication and Authorization**: Current implementations rely on simple API keys or sessions tokens stored within individual servers, but production systems need more sophisticated approaches. Consider the difference between "show me today's calendar events" (relatively low risk) versus "cancel my meeting with the CEO" (high risk). We need OAuth-style flows with granular permissions that can distinguish between read operations and potentially destructive actions which can be invoked across multiple services.
 
 2. **Context Management**: As models collaborate across services, they need a way to share this context. This happens because of two main issues - only relevant context should flow across boundaries with appropriate privacy safeguards and we need a way to maintain conversational context of what's happened so far without forcing users to repeat information.
 
 3. **Observability and Debugging**: When combining multiple AI services, tracing the source of errors becomes exponentially more complex. We need standardized logging and monitoring to understand what happened when things go wrong, especially when one model delegates to another.
 
-These challenges highlight why MCPs are currently more "microservices in concept" than "microservices in practice."
-
-While the specification provides a foundation, building truly production-ready systems will require solutions to these infrastructure problems. The community of MCP developers is actively working on these issues, but significant work remains before MCPs can seamlessly power complex production applications.
+These are challenges that will need to be overcome in order to scale out MCPs into larger and more complex systems.
 
 ## Looking Forward: Adaptive AI Microservices
 
@@ -73,18 +77,32 @@ The future we're working toward is one where AI services can dynamically create 
 
 Consider how rapidly the ecosystem is already growing. Some hosted MCP providers are already handling up to 18,000 requests daily, showing clear product-market fit. New marketplaces for MCPs (like Cline's recent launch) are enabling developers to monetize these specialized services. This evolution parallels traditional microservices architecture, but with a crucial difference: the coordination happens through AI reasoning rather than hardcoded logic.
 
-These AI microservices will need to:
+These microservices will need to do a few different things
 
-- Discover and integrate new tools dynamically
-- Execute semantically complex tasks (not just "get my GitHub issues" but "summarize my most urgent pull requests")
-- Handle delegated responsibility across multiple models with different specializations
-- Maintain context and security boundaries between services
-- Scale and adapt based on usage patterns
+1. **Tool Discovery**: Current MCP servers simply list all of the tools but I think it's a bit unfeasible to throw 100+ tools at a model and expect it to always call the right tool. What I think will probably happen is that models will start to specify semantic requests that they have (Eg. **Find me an outfit under $150 made of cotton** and the MCP server will dynamically fetch and provide tools on demand )
 
-For example, instead of a model making numerous individual API calls to find products, a future e-commerce MCP might accept queries like "fetch me ten black dresses under $200 in size S available for same-day delivery in Singapore" and handle all the necessary filtering, sorting and availability checks internally. The model doesn't need to understand the implementation - just the capability.
+2. **Maintaining Context** : There needs to be a way for MCP servers to share and pull context on the current user information on demand. This is important as we start to chain together longer context calls. Perhaps this might come in the form of managed memory provided by the main MCP host which will provide the relevant context with it's call but who knows
+
+3. **More Delegated Responsbility** : Currently most MCP servers have very specific functionality exposed as tools - get me a github issue with this ID, fetch me my list of Supabase tables etc. I think in the future we'll see more delegated responsibility between multiple models with different specialisations. For example, instead of a model making numerous individual API calls to find products, a future e-commerce MCP might accept queries like "fetch me ten black dresses under $200 in size S available for same-day delivery in Singapore" and handle all the necessary filtering, sorting and availability checks internally.
+
+This ultimately will resemble more of a microservice architecture that we're familiar with rather than say the current use of MCPs as substitutes for easier tool calling.
+
+### Monetized Specialisation
+
+As MCPs mature, we'll likely see a marketplace economy emerge around specialized AI services. Similar to how app stores transformed mobile development, MCP marketplaces could enable developers to monetize capabilities through subscriptions or usage-based pricing. This specialization creates better economics for all: users get more capable systems, model providers focus on core reasoning, and specialists monetize their domain expertise in areas like financial analysis, medical knowledge, or creative tools.
+
+The success of this ecosystem will depend on balancing openness with quality controls. As with all platform economies, network effects will be crucial—the most valuable MCP services will be those that integrate seamlessly with the widest range of other tools. The emerging landscape might resemble cloud infrastructure markets, where specialized providers offer components that developers can combine into comprehensive solutions for specific use cases.
+
+Here are two concise paragraphs exploring the economic aspects of MCPs, including the first-mover advantage for service providers:
+
+## The Economics of an MCP Ecosystem
+
+As MCPs mature, we'll likely see a marketplace economy emerge around specialized AI services. Similar to how app stores transformed mobile development, MCP marketplaces could enable developers to monetize capabilities through subscriptions or usage-based pricing. This specialization creates better economics for all: users get more capable systems, model providers focus on core reasoning, and specialists monetize their domain expertise in areas like financial analysis, medical knowledge, or creative tools.
+
+Service providers who embrace MCPs early will gain significant competitive advantages. E-commerce platforms, travel agencies, and financial institutions that offer standardized MCP endpoints will become the preferred partners for AI systems, driving higher engagement and capturing market share. Much like how businesses that adopted mobile-first approaches dominated the smartphone era, companies that provide AI-native interfaces through MCPs will set customer expectations and establish themselves as industry leaders. This first-mover advantage extends beyond just visibility—these early adopters will help shape the protocol standards themselves, potentially influencing how entire industries interact with AI systems for years to come.
 
 ## Conclusion
 
 The true promise of MCPs isn't in their technical specification, but in how they enable a new paradigm for AI services: systems that can dynamically discover, compose, and coordinate tools on behalf of users. While today's implementations are just scratching the surface, the evolution from simple tool calling to truly adaptive AI microservices will require solving complex challenges around authentication, context sharing, security, and observability.
 
-By addressing these challenges systematically, we can move beyond proof-of-concept implementations to production-ready systems that truly enable the next generation of AI applications – ones where the focus shifts to meeting user needs rather than managing technical integrations.
+By addressing these challenges systematically, we can build more complex language-model applications which have a richer set of capabilities and integrations with our data and daily tools.
