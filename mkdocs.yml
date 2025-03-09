@@ -18,6 +18,7 @@ nav:
   - Talks: talk.md
 
 plugins:
+  - social
   - search
   - blog:
       blog_toc: true
