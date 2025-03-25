@@ -9,6 +9,8 @@ authors:
   - ivanleomk
 ---
 
+# Use streaming UIs and customers are willing to wait 5x longer
+
 If you're not building your application with streaming in mind, you're making two major mistakes
 
 1. You're going to have to spend months refactoring your code to adapt to streaming once you make this decision
