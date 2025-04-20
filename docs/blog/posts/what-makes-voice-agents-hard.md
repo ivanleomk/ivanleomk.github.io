@@ -1,6 +1,6 @@
 ---
 title: Why are voice agents hard to build?
-date: 2025-05-20
+date: 2025-04-20
 description: Three key things making it tough to build reliable voice agents
 categories:
   - Voice
