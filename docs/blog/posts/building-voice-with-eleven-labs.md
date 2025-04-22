@@ -20,7 +20,9 @@ To build great user experiences with these voice agents, there are three critica
 - Strategic Randomization: Implementing controlled variability that builds adaptability rather than rote responses
 - Skill-Targeted Scenarios: Focusing on specific competencies rather than general conversation abilities
 
-This article unpacks the practical lessons learned while building a voice-based training solution with ElevenLabs that enables flight attendants to perfect premium cabin service interactions—without risking passenger satisfaction or airline reputation during the learning process.
+This article unpacks the practical lessons learned while building a voice-based training solution with ElevenLabs's new conversational AI that enables flight attendants to perfect premium cabin service interactions—without risking passenger satisfaction or airline reputation during the learning process.
+
+<!-- more -->
 
 ## Thoughtful Context Design
 
