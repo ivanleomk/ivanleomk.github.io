@@ -10,7 +10,7 @@ authors:
   - ivanleomk
 ---
 
-# Building Voice Applications with 11Labs Agents
+# Building Voice Applications with ElevenLabs Agents
 
 Voice-based AI applications represent the next frontier in customer service training, offering a more natural and effective alternative to traditional methods. They create consistent, risk-free practice environments where trainees can master complex interactions before facing real customers.
 
@@ -137,7 +137,7 @@ The key insight is that voice agents should not aim for general conversational a
 
 The success of voice applications depends far more on thoughtful interaction design than on technical implementation. By focusing on authentic context, strategic randomization, and targeted skill development, I created an effective flight attendant training simulator that delivers genuine value.
 
-11Labs dramatically simplifies the technical implementation, allowing developers to focus on what matters most: creating voice experiences that feel natural, responsive, and valuable to users. The platform's constraints actually encourage more thoughtful design choices, focusing energy on creating meaningful content rather than wrestling with technical implementation.
+ElevenLabs dramatically simplifies the technical implementation, allowing developers to focus on what matters most: creating voice experiences that feel natural, responsive, and valuable to users. The platform's constraints actually encourage more thoughtful design choices, focusing energy on creating meaningful content rather than wrestling with technical implementation.
 
 For applications like training simulations, customer service practice, or voice interfaces requiring quick deployment, success depends on thoughtful design that considers the specific skills being developed, the context needed for authentic experiences, and the strategic introduction of variability to build adaptability.
 
